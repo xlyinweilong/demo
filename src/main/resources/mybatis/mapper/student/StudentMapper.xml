@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yin.demo.student.mapper.StudentMapper">
+
+    <sql id="Base_Column_List">
+      id, name
+    </sql>
+
+    <select id="findAll" resultType="com.yin.demo.student.entity.po.StudentPo">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM student
+    </select>
+
+</mapper>
